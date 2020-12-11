@@ -1,1 +1,477 @@
+<!doctype html>
 
+
+<html>
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+
+  <link rel="stylesheet" type="text/css" href="../index.css">
+
+
+  <link rel="icon" type="image/png" href="../LOGO2.png">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans" rel="stylesheet">
+
+
+    <script src="../jquery-3.1.1.min.js"></script>
+
+
+  <script type="text/javascript" src="../index.js"></script>
+
+
+    <style>
+
+
+ body {font-family: Arial, Helvetica, sans-serif;}
+
+
+ {box-sizing: border-box;}
+
+
+
+
+
+input[type=text], select, textarea {
+
+
+    width: 100%;
+
+
+    padding: 12px;
+
+
+    border: 1px solid #ccc;
+
+
+    border-radius: 4px;
+
+
+    box-sizing: border-box;
+
+
+    margin-top: 6px;
+
+
+    margin-bottom: 16px;
+
+
+}
+
+
+
+
+
+input[type=submit] {
+
+
+    background-color: #000000;
+
+
+    color: white;
+
+
+    padding: 12px 20px;
+
+
+    border: none;
+
+
+    border-radius: 4px;
+
+
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+input[type=submit]:hover {
+
+
+    background-color: #555;
+
+
+}
+
+
+
+
+
+.container {
+
+
+    border-radius: 5px;
+
+
+    background-color: #ffffff;
+
+
+    padding: 20px;
+
+
+}
+
+
+        *{
+
+
+    margin: 0;
+
+
+    padding: 0;
+
+
+}
+
+
+.rate {
+
+
+    float: left;
+
+
+    height: 46px;
+
+
+    padding: 0 10px;
+
+
+}
+
+
+.rate:not(:checked) > input {
+
+
+    position:absolute;
+
+
+    top:-9999px;
+
+
+}
+
+
+.rate:not(:checked) > label {
+
+
+    float:right;
+
+
+    width:1em;
+
+
+    overflow:hidden;
+
+
+    white-space:nowrap;
+
+
+    cursor:pointer;
+
+
+    font-size:30px;
+
+
+    color:#ccc;
+
+
+}
+
+
+.rate:not(:checked) > label:before {
+
+
+    content: '★ ';
+
+
+}
+
+
+.rate > input:checked ~ label {
+
+
+    color: #ffc700;    
+
+
+}
+
+
+.rate:not(:checked) > label:hover,
+
+
+.rate:not(:checked) > label:hover ~ label {
+
+
+    color: #deb217;  
+
+
+}
+
+
+.rate > input:checked + label:hover,
+
+
+.rate > input:checked + label:hover ~ label,
+
+
+.rate > input:checked ~ label:hover,
+
+
+.rate > input:checked ~ label:hover ~ label,
+
+
+.rate > label:hover ~ input:checked ~ label {
+
+
+    color: #c59b08;
+
+
+}
+
+
+.select{
+
+
+    height: 50px;
+
+
+    width: 370px;
+
+
+}
+
+
+.container{
+
+
+    height: 50px;
+
+
+    width: 50%;
+
+
+}    
+.RegularWhiteText{
+    color: #ffffff;
+}    
+body {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+</style>
+
+
+
+
+
+<title>Feedback</title>
+
+
+</head>
+
+
+<body>
+
+
+ <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+
+  <nav>
+    <a class="navlink" href="#">Home</a>
+    <a class="navlink" href="https://qubit-kj.github.io/TSA-Video-Conferencing-Website/Subscriptions">Subscriptions</a>  
+    <a class="navlink" href="#">Feedback</a>
+  </nav>
+
+
+
+<h1 class="tc">Feedback</h1>
+
+
+  <form action="#">
+
+
+      <article class="cma form">
+
+
+        <div class="flex-container">
+
+
+            <div class="threerow label-input-container">
+
+
+                <label for="fname" class="RegularWhiteText">Full  Name</label>
+
+
+                <input class="select" type="text" id="fname" name="fullname" placeholder="" required>
+
+
+            </div>
+
+
+            <div class="threerow label-input-container">
+
+
+                <label for="email" class="RegularWhiteText">Email</label>
+
+
+                <input class="select" type="text" id="lname" name="email" placeholder="" required>
+
+
+            </div>
+
+
+            <div class="threerow label-input-container">
+
+
+                <label for="phone" class="RegularWhiteText">Phone</label>
+
+
+                <input class="select" type="text" id="lname" name="lastname" placeholder="">
+
+
+            </div>
+
+
+        </div>    
+
+
+        <label for="country" class="RegularWhiteText">Which product did you purchase?</label>  
+
+
+        <select class="" required>
+
+
+            <option value="" required>Select</option>
+
+
+            <option value="Option1" required>Horizon View Headset</option>	
+
+
+            <option value="Option2" required>Horizon Cardboard</option>
+            
+            <option value="Option3" required>Controllers</option>
+            
+            <option value="Option4" required>Replacement Charger</option>
+
+            <!-- Fix Color -->
+
+
+            <!-- The box is not big enough to actually show the text. Fix this. -->
+
+
+        </select>
+
+
+        <div class="flex-container">
+
+
+            <div class="label-input-container tworow">
+
+
+                <label for="country" class="RegularWhiteText" required>How would you rate your overall experience?</label>
+
+
+               <body>
+  <div class="rate">
+    <input type="radio" id="stars5" name="rate" value="5" />
+    <label for="stars5" title="5">5 stars</label>
+    <input type="radio" id="stars4" name="rate" value="4" />
+    <label for="stars4" title="4">4 stars</label>
+    <input type="radio" id="stars3" name="rate" value="3" />
+    <label for="stars3" title="3">3 stars</label>
+    <input type="radio" id="stars2" name="rate" value="2" />
+    <label for="stars2" title="2">2 stars</label>
+    <input type="radio" id="stars1" name="rate" value="1" />
+    <label for="stars1" title="1">1 star</label>
+  </div>
+</body>
+                    
+              </div>
+
+
+          </div>
+
+
+
+          </div>
+
+
+      </div>
+
+
+      <label for="subject" class="RegularWhiteText">Comments</label>
+
+
+      <textarea class="textareacolor" id="subject" name="subject" placeholder="" style="height:200px" required></textarea>
+
+
+      <a class="button" href="https://appleisthebest.github.io/AR-and-VR/resources/ThankYou.html" target="_blank">Submit</a> 
+
+
+   </article> 
+
+
+ </form>
+
+
+
+
+
+    </body>
+
+
+</html>
