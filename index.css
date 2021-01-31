@@ -1,26 +1,237 @@
- /* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
+<style>
+
+@media only screen and (max-width:620px) {
+  body {
+    width: 100%;
+  }
 }
 
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
+nav {
+  position: fixed;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding-left: 525px;
+}
+
+.header-home {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  padding-left: 175px;
+  top: 5;
+  width: 100%;
+  background-color: #eff1f3;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 250px;
+  bottom: 0;
+  width: 100%;
+  background-color: #002140;
+}
+
+a.navlink {
+	text-decoration: none;
+	font-size: 18px;
+	color: gray;
+	padding: 16px;
+	display: inline-block;
+	margin-left: -4px;
+	transition: color 0.25s;
+  font-family: arial, sans-serif;
+}
+
+a.navlink:hover {
+	color: #002140;
+  text-decoration: underline;
+	background-color: white;
+  font-family: arial, sans-serif;
+}
+
+p.footer-text {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  line-height: 160%;
+  font-weight: 500;
+  font-family: arial, sans-serif;
 }
 
-/* The dropdown container */
-.dropdown {
-  float: left;
+p.footer-text:hover {
+  text-decoration: underline;
+}
+
+p.footer-text-headings {
+  color: white;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+a.footer-links {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-line {
+  position: absolute;
+  border-left: 1px solid white;
+  height: 180px;
+  left: 400px;
+}
+
+span.align {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+}
+
+.footer-info-box {
+  background: none;
+  width: 300px;
+  position: relative;
+}
+
+.footer-copyright-box {
+  background-color: #002140;
+  margin-left: 600px;
+  position: relative;
+}
+
+.home-page-text-box-one {
+  background-color: #eff1f3;
+  width: 300px;
+  border: 1px solid #d4d6d7;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 200px;
+  margin-left: 300px;
+  margin-bottom: 100px;
+  position: absolute;
+}
+
+.home-page-text-box-two {
+  background-color: #eff1f3;
+  width: 300px;
+  border: 1px solid #d4d6d7;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 200px;
+  margin-left: 775px;
+  margin-bottom: 100px;
+  position: absolute;
+}
+
+.home-button {
+  background-color: #002140;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 15px 32px;
+  font-family: arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.home-button:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24)
+}
+
+p.text-box-header {
+  font-family: arial, sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+p.home-text {
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  line-height: 200%;
+}
+
+p.home-header-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+nav .search-container {
+  float: right;
+  margin-right: 610px;
+}
+
+nav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 1px solid #d4d6d7;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  nav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  nav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+button.search {
+  background-color: #002140;
+  color: white;
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+button.search:hover {
+  text-decoration: underline;
+}
+
+img.nav {
+  width: 50px;
+  height: 50px;
   overflow: hidden;
+  margin-top: -6px;
+  margin-bottom: -18px;
+  padding-right: 5px;
 }
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
+
+</style>
