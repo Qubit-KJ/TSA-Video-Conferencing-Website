@@ -234,4 +234,10 @@ img.nav {
   padding-right: 5px;
 }
 
+img.doge {
+  height: 200px;
+  width: 200px;
+  margin-top: 75px;
+}
+
 </style>
