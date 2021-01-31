@@ -261,11 +261,6 @@ img.doge {
     background-color: #002140;
     color: white;
   }
-
-  body {
-        padding-left: 200px;
-        padding-right: 200px;
-    }
     
     input[type=text], select, textarea {
     
@@ -311,10 +306,12 @@ img.doge {
         color: #002140;
     }
     
-    body {
+    body.feedback {
         max-width: 100%;
         height: auto;
         width: auto;
+	padding-left: 200px;
+        padding-right: 200px;
     }
     
     span.align {
