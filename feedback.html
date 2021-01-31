@@ -1,224 +1,233 @@
-<!doctype html>
-
-
-<html>
-
 
 <head>
+
+
+    <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+
+  <link rel="stylesheet" type="text/css" href="css.css">
+
+
+  <link rel="icon" type="image/png" href="../LOGO2.png">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans" rel="stylesheet">
+
+
+    <script src="../jquery-3.1.1.min.js"></script>
+
+
+  <script type="text/javascript" src="../index.js"></script>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    .slideshow-container {
+      max-width: 1000px;
+      position: fixed;
+      margin: auto;
+    }
+
+    .vl {
+      border-left: 1px solid #F4F4F4;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      margin-left: -3px;
+      top: 1600px;
+    }
+    .img- {
+    left: 50%;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .text {
+    text-color: red;
+    }
+
+
+
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+
+    h1{
+        font-family: sans-serif;
+        font-size: 50px;
+        margin-top: 10px;
+        color: white;
+    }
+    h2{
+        margin-top: 16px;
+        color: white;
+    }
+    p{
+        margin: 10px 0;
+        color: #cccccc;
+
+    }
 <style>
-    
+
     body {
         background-color: white;
-        background-size: cover;
-    }
-
-    }
-    .button, input[type="submit"]{
-        padding: 14px;
-        background-color: transparent;
-        color: #002140;
-        border: 0;
-        text-decoration: none;
-        position: relative;
-        display: inline-block;
-        margin-right:4px;
-        z-index: 1;
-        margin-bottom: 10px;
-        font-size:22px;
-        transition: color 0.5s, background 0.5s;
-        border-radius: 5px;
-    }
-    .button, input[type="submit"],select, option{
-        cursor: pointer;
-        
-    }
-    .button:hover, input[type="submit"]:hover{
-        color: #ffffff;
-    }
-    input[type="date"]{
-        cursor: text;
-    }
-    .button::before, input[type="submit"]::before{
-        content:"";
-            top: 0;
-            left:0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        position: absolute;
-        color: black;
-        background-color: #ffffff;
-    }
-    .button::after, input[type="submit"]::after{
-        content:"";
-        top:0;
-        left:0 !important;
-        right: auto !important;
-        width: 0;
-        z-index: -1;
-        position: absolute;
-        display: block;
-        height: 100%;
-        background-color: #002140;
-        transition: width 0.5s;
-        border-radius: 5px;
-    }
-    .button:hover::after, input[type="submit"]:hover::after{
-        width: 100% !important;
-    }
-    .button.light, input[type="submit"].light{
-        color: #002140 !important;
-    }
-    .button.light:hover, input[type="submit"].light:hover{
-        color:#002140 !important;
-    }
-    .button.light::before, input[type="submit"].light::before{
-        background-color: white !important;
-    }
-    .button.light::after, input[type="submit"].light::after{
-        background-color: #002140 !important;
-    }
-
-    body {font-family: Arial, Helvetica, sans-serif;}
-    .container {
-        border-radius: 5px;
-        background-color: #ffffff;
-        padding: 20px;
-    }
-            *{
-        margin: 0;
-        padding: 0;
-    }
-    .rate {
-        float: left;
-        height: 46px;
-        padding: 0 10px;
-    }
-    .rate:not(:checked) > input {
-        position:absolute;
-        top:-9999px;
-    }
-    .rate:not(:checked) > label {
-        float:right;
-        width:1em;
-        overflow:hidden;
-        white-space:nowrap;
-        cursor:pointer;
-        font-size:30px;
-        color:#ccc;
-    }
-    .rate:not(:checked) > label:before {
-        content: '★ ';
-    }
-    .rate > input:checked ~ label {
-        color: #ffc700;
-    }
-    .rate:not(:checked) > label:hover,
-    .rate:not(:checked) > label:hover ~ label {
-        color: #deb217;
-    }
-    .rate > input:checked + label:hover,
-    .rate > input:checked + label:hover ~ label,
-    .rate > input:checked ~ label:hover,
-    .rate > input:checked ~ label:hover ~ label,
-    .rate > label:hover ~ input:checked ~ label {
-        color: #c59b08;
-    }
-    .selectfb{
-        height: 50px;
-    }
-    .email{
-        width: 50%;
-        height: 50px;
-    }
-    /*End New Input Code*/
-    .container {
-        padding: 20px;
-    }
-    
-    h2 > a{
-        font-size: 1.5em;
-    }
-    
-    article.form{
-        padding: 0 75px;
-    }
-    .flex-container{
-        display: flex;
-    }
-    label{
-        display: block;
-            user-select: none;
-    }
-    .label-input-container{
-        flex-grow:1;
-    }
-    .label-input-container:not(:last-child){
-        margin-right:20px;
-    }
-
- 
-    </style>
-    
-
-
-
-<title>Feedback</title>
-
-
-</head>
-
-
-<body>
-
-
- <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-
-<h1 class="tc">Feedback</h1>
+@@ -293,64 +178,27 @@ <h1 class="tc">Feedback</h1>
 
 
   <form action="#">
+
+
       <article class="cma form">
+
+
         <div class="flex-container">
+
+
             <div class="threerow label-input-container">
+
+
                 <label for="fname" class="RegularWhiteText">Full  Name</label>
+
+
                 <input class="select" type="text" id="fname" name="fullname" placeholder="" required>
+
+
             </div>
+
+
+            <div class="threerow label-input-container">
+
+
          <div class="threerow label-input-container">
                 <label for="email" class="RegularWhiteText">Email</label>
+
+
                 <input class="select" type="text" id="lname" name="email" placeholder="" required>
+
+
+            </div>
+
+
         </div>
             <div class="threerow label-input-container">
+
+
                 <label for="phone" class="RegularWhiteText">Phone</label>
+
+
                 <input class="select" type="text" id="lname" name="lastname" placeholder="">
+
+
             </div>
+
+
         </div>    
+
+
         <div class="flex-container">
+
+
             <div class="label-input-container tworow">
+
+
                 <label for="country" class="RegularWhiteText" required>How would you rate your overall experience?</label>
+
+
                <body>
-  
+  <div class="rate">
+
     <div class="rate">
     <input type="radio" id="stars5" name="rate" value="5" />
     <label for="stars5" title="5">5 stars</label>
     <input type="radio" id="stars4" name="rate" value="4" />
-    <label for="stars4" title="4">4 stars</label>
-    <input type="radio" id="stars3" name="rate" value="3" />
-    <label for="stars3" title="3">3 stars</label>
-    <input type="radio" id="stars2" name="rate" value="2" />
-    <label for="stars2" title="2">2 stars</label>
+@@ -362,40 +210,15 @@ <h1 class="tc">Feedback</h1>
     <input type="radio" id="stars1" name="rate" value="1" />
     <label for="stars1" title="1">1 star</label>
   </div>
+</body>
+
 </body>       
               </div>
+
+
           </div>
+
+
+
           </div>
+
+
       </div>
+
+
       <label for="subject" class="RegularWhiteText">Comments</label>
+
+
       <textarea class="textareacolor" id="subject" name="subject" placeholder="" style="height:200px" required></textarea>
+
+
       <a class="button" href="" target="_blank">Submit</a> 
+
+
    </article> 
+
+
  </form>
+
+
+
+
+
     </body>
+
+
 </html>
