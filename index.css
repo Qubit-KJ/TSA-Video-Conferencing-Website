@@ -239,5 +239,27 @@ img.doge {
   width: 200px;
   margin-top: 75px;
 }
+  
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  #customers tr:{background-color: #ddd;}
+
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #002140;
+    color: white;
+  }
 
 </style>
