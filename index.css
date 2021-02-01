@@ -280,7 +280,7 @@ img.doge {
     margin-right: auto;
   }
 
-  information.header {
+  .header-information {
     position: fixed;
     left: 0;
     right: 0;
