@@ -280,4 +280,16 @@ img.doge {
     margin-right: auto;
   }
 
+  information.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    top: 5;
+    width: 100%;
+    background-color: #eff1f3;
+    text-align: center;
+}
+
 </style>
