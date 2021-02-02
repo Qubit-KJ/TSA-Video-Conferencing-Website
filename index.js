@@ -1,5 +1,3 @@
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
 function myMap() {
 var mapProp= {
  center:new google.maps.LatLng(51.388991, 30.098648),
@@ -15,5 +13,3 @@ function myFunction() {
   copyText.setSelectionRange(0, 32)
   document.execCommand("copy");
 }
-
-
