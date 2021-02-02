@@ -292,4 +292,16 @@ img.doge {
     text-align: center;
 }
 
+  .header-purchase {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-top: -235px;
+    width: 100%;
+    background-color: #eff1f3;
+    text-align: center;
+}
+
 </style>
