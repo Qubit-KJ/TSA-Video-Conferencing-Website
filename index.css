@@ -286,7 +286,7 @@ img.doge {
     right: 0;
     padding-top: 60px;
     padding-bottom: 10px;
-    top: 5;
+    margin-top: 0px;
     width: 100%;
     background-color: #eff1f3;
     text-align: center;
